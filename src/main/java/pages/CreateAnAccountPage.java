@@ -35,36 +35,48 @@ public class CreateAnAccountPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//input[@id='alias']") WebElement AliasAddress_Field;
 	@FindBy(how = How.XPATH, using = "//button[@id='submitAccount']") WebElement Register_Button;
 	@FindBy(how = How.XPATH, using = "//div[@id=\"center_column\"]/div/p") WebElement ErrorAlertForMandatoryFields;
+	private WebElement cellPhoneField;
+	private WebElement zipCodeField;
 	
-	public void ClickMrRadioButton() {
+	public void click_Mr_Radio_Button() {
 		Mr_RadioButton.click();
 	}
 	
-	public void FillFirstNameField(String FirstName) {
+	public void fillFirstNameField(String FirstName) {
 		FirstName_Field.sendKeys(FirstName);
 	}
 	
-	public void FillLastNameField(String LastName) {
+	public void fill_Last_Name_Field(String LastName) {
 		LastName_Field.sendKeys(LastName);
 	}
 	
-	public void FillPasswordField(String Password) {
+	public void fill_Password_Field(String Password) {
 		Password_Field.sendKeys(Password);
 	}
 	
-	public void SelectDaySelection(String day) {
+	public void select_Day_Selection(String day) {
 		
-		SelectFromDropdownByValue(Day_Selection, RemoveDecimalPoint(day));
+		selectFromDropdownByValue(Day_Selection, removeDecimalPoint(day));
 	}
 	
 	public void SelectMonthSelection(String month) {
-		SelectFromDropdownByValue(Month_Selection, month);
+		select_From_Dropdown_By_Value(Month_Selection, month);
 	}
 	
-	public void SelectYearSelection(String year) {
-		SelectFromDropdownByValue(Year_Selection, RemoveDecimalPoint(year));
+	public void select_Year_Selection(String year) {
+		selectFromDropdownByValue(Year_Selection, RemoveDecimalPoint(year));
 	}
 	
+	private void select_From_Dropdown_By_Value(WebElement year_Selection2, Object removeDecimalPoint) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private Object RemoveDecimalPoint(String year) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	public void ClickNewsletterCheckBox() {
 		Newsletter_CheckBox.click();
 	}
@@ -94,19 +106,19 @@ public class CreateAnAccountPage extends BasePage {
 	}
 
 	public void SelectStateField(String State) {
-		SelectFromDropdownByVisibleText(State_Field, State);
+		selectFromDropdownByVisibleText(State_Field, State);
 	}
 
 	public void FillZipCodeField(String ZipCode) {
-		ZipCode_Field.sendKeys(RemoveDecimalPoint(ZipCode));
+		zipCodeField.sendKeys(RemoveDecimalPoint(ZipCode));
 	}
 
 	public void SelectCountryField(String Country) {
-		SelectFromDropdownByVisibleText(Country_Field, Country);
+		selectFromDropdownByVisibleText(Country_Field, Country);
 	}
 
 	public void FillCellPhoneField() {
-		CellPhone_Field.sendKeys(PhoneNumberGenerator());
+		cellPhoneField.sendKeys(phoneNumberGenerator());
 	}
 	
 	public void FillAliasAddressField(String alias) {

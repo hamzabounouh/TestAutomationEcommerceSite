@@ -39,7 +39,7 @@ public class ProductPage extends BasePage {
 	}
 
 	public void SelectSize(String Size) {
-		SelectFromDropdownByVisibleText(Size_Selection, Size);
+		selectFromDropdownByVisibleText(Size_Selection, Size);
 	}
 
 	public void SelectColor() {
@@ -60,15 +60,15 @@ public class ProductPage extends BasePage {
 
 	public void TestTotalCalculation() throws InterruptedException {
 
-		double DblCurrentTotal = ConvertStringToDouble(TotalProductPrice);
+		double DblCurrentTotal = convertStringToDouble(TotalProductPrice);
 		
 		ClickIncreaseQuantityButton();
 		
-		double DblProductPrc = ConvertStringToDouble(ProductPrice);
+		double DblProductPrc = convertStringToDouble(ProductPrice);
 
 		Thread.sleep(2000);
 
-		double DblModifiedTotal = ConvertStringToDouble(TotalProductPrice);
+		double DblModifiedTotal = convertStringToDouble(TotalProductPrice);
 		
 		if (DblCurrentTotal + DblProductPrc == DblModifiedTotal) {
 			System.out.println("Success! the calculation is correct");

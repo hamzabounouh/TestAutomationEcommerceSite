@@ -27,24 +27,24 @@ public class LoginPage extends BasePage{
 		Email_Address_Field.sendKeys(Email);
 	}
 	
-	public void EnterPassword(String Password) {
+	public void enterPassword(String Password) {
 		Password_Field.sendKeys(Password);
 	}
 	
-	public void ClickSigninButton() {
-		SignIn_Button.click();
+	public void clickSigninButton() {
+		signInButton.click();
 	}
 	
-	public void ClickCreateAnAccountButton() {
-		CreateAnAccount_Button.click();
+	public void clickCreateAnAccountButton() {
+		createAnAccountButton.click();
 	}
 	
-	public void FillCreatAccountEmailField() {
-		CreatAccountEmail_Field.sendKeys(RandomNumberGenerator() + "." + RandomNumberGenerator() + "user@email.com");
+	public void fillCreatAccountEmailField() {
+		creatAccountEmailField.sendKeys(randomNumberGenerator() + "." + randomNumberGenerator() + "user@email.com");
 	}
 
-	public void FillCreatAccountWithInvalidEmailField(String email) {
-		CreatAccountEmail_Field.sendKeys(email);
+	public void fillCreatAccountWithInvalidEmailField(String email) {
+		creatAccountEmailField.sendKeys(email);
 	}
 
 	public void VerifyCreatAccountWithInvalidEmailField() {

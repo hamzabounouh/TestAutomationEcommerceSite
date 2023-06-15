@@ -6,11 +6,11 @@ public class ContactUsPage {
 
 	WebDriver driver;
 	
-	public ContactUsPage(WebDriver driver) {
+	public void contactUsPage(WebDriver driver) {
 		this.driver = driver;
 	}
 	
-	public String GetPageTitle() {
+	public String getPageTitle() {
 		return driver.getTitle();
 	}
 }
