@@ -29,12 +29,12 @@ public class MainPage {
 		Sign_in_Button.click();
 	}
 	
-	public void Hover_Over_Women_Button() {
+	public void HoverOverWomen_Button() {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Women_Button).perform();
 	}
 
-	public void Click_Tshirts_Button() {
+	public void ClickTshirtsButton() {
 		Tshirts_Button.click();
 	}
 	
@@ -42,8 +42,13 @@ public class MainPage {
 		return driver.getTitle();
 	}
 	
-	public void Click_ContactUS_Button() {
+	public void ClickContactUSButton() {
 		ContactUs_Button.click();
+	}
+
+	public void HoverOverWomenButton() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

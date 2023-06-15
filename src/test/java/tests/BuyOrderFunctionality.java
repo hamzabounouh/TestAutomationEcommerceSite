@@ -62,38 +62,38 @@ public class BuyOrderFunctionality {
 
 		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
 		// 3. Move your cursor over Women's link.
-		MyAcc.Hover_Over_Women_Button();
+		MyAcc.HoverOverWomenButton();
 		// 4. Click on sub menu 'T-shirts'.
-		MyAcc.Click_Tshirts_Button();
+		MyAcc.ClickTshirtsButton();
 
 		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
 		// 5. Mouse hover on the first product displayed.
-		ts.Hover_Over_Product();
+		ts.HoverOverProduct();
 		// 6. 'More' button will be displayed, click on 'More' button.
-		ts.Click_More_Button_Product_One();
+		ts.ClickMoreButtonProductOne();
 
 		ProductPage ProdP = PageFactory.initElements(driver, ProductPage.class);
 		// 7. Increase quantity to 2.
-		ProdP.Enter_Quantity("2");
+		ProdP.EnterQuantity("2");
 		// 8. Select size 'L'
-		ProdP.Select_Size("L");
+		ProdP.SelectSize("L");
 		// 9. Select color.
-		ProdP.Select_Color();
+		ProdP.SelectColor();
 		// 10. Click 'Add to Cart' button.
-		ProdP.Click_AddToCart_Button();
+		ProdP.ClickAddToCart_Button();
 		// 11. Click 'Proceed to checkout' button.
-		ProdP.Click_ProceedToCheckout_Button();
+		ProdP.ClickProceedToCheckoutButton();
 
 		// 12. Complete the buy order process till payment.
 		OrderPage OrderP = PageFactory.initElements(driver, OrderPage.class);
 		OrderP.Click_ProceedToCheckout();
-		OrderP.Click_ProceedToCheckout_Address_Page();
-		OrderP.Click_CheckBox_AgreeToTerms_Shipping_Page();
-		OrderP.Click_ProceedToCheckout_Shipping_Page();
-		OrderP.Click_PayByBankWire_Payment_Page();
-		OrderP.Click_IConfirmMyOrder_Page();
+		OrderP.ClickProceedToCheckoutShippingPage();
+		OrderP.ClickCheckBoxAgreeToTermsShippingPage();
+		OrderP.ClickProceedToCheckoutShippingPage();
+		OrderP.ClickPayByBankWirePaymentPage();
+		OrderP.ClickIConfirmMyOrderPage();
 		// 13. Make sure that Product is ordered.
-		OrderP.Assert_Order_Confirmation();
+		OrderP.AssertOrderConfirmation();
 
 	}
 

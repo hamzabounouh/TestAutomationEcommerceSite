@@ -26,16 +26,16 @@ public class MyAccountPage {
 	WebElement NameOnAccount;
 
 	//InteractiveMethods
-	public void Hover_Over_Women_Button() {
+	public void HoverOverWomenButton() {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(Women_Button).perform();
 	}
 
-	public void Click_Tshirts_Button() {
+	public void ClickTshirtsButton() {
 		Tshirts_Button.click();
 	}
 
-	public void Click_OrderHistoryAndDetails_Button() {
+	public void ClickOrderHistoryAndDetailsButton() {
 		OrderHistoryAndDetails_Button.click();
 	}
 	

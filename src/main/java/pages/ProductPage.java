@@ -33,28 +33,28 @@ public class ProductPage extends BasePage {
 	WebElement ProductPrice;
 
 	// InteractiveMethods
-	public void Enter_Quantity(String quantity) {
+	public void EnterQuantity(String quantity) {
 		Quantity_Wanted.clear();
 		Quantity_Wanted.sendKeys(quantity);
 	}
 
-	public void Select_Size(String Size) {
+	public void SelectSize(String Size) {
 		SelectFromDropdownByVisibleText(Size_Selection, Size);
 	}
 
-	public void Select_Color() {
+	public void SelectColor() {
 		Select_Color.click();
 	}
 
-	public void Click_AddToCart_Button() {
+	public void ClickAddToCart_Button() {
 		AddToCart_Button.click();
 	}
 
-	public void Click_ProceedToCheckout_Button() {
+	public void ClickProceedToCheckoutButton() {
 		ProceedToCheckout_Button.click();
 	}
 
-	public void Click_IncreaseQuantity_Button() {
+	public void ClickIncreaseQuantityButton() {
 		IncreaseQuantity_Button.click();
 	}
 
@@ -62,7 +62,7 @@ public class ProductPage extends BasePage {
 
 		double DblCurrentTotal = ConvertStringToDouble(TotalProductPrice);
 		
-		Click_IncreaseQuantity_Button();
+		ClickIncreaseQuantityButton();
 		
 		double DblProductPrc = ConvertStringToDouble(ProductPrice);
 
@@ -75,6 +75,21 @@ public class ProductPage extends BasePage {
 		} else {
 			System.out.println("Failure, the calculation is wrong");
 		}
+	}
+
+	public void ClickAddToCartButton1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void ClickProceedToCheckoutButton1() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void ClickAddToCartButton() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

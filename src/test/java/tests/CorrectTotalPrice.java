@@ -58,27 +58,27 @@ public class CorrectTotalPrice {
 
 		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
 		// 3. Move your cursor over Women's link.
-		MyAcc.Hover_Over_Women_Button();
+		MyAcc.HoverOverWomenButton();
 		// 4. Click on sub menu 'T-shirts'.
-		MyAcc.Click_Tshirts_Button();
+		MyAcc.ClickTshirtsButton();
 
 		TshirtsPage ts = PageFactory.initElements(driver, TshirtsPage.class);
 		// 5. Mouse hover on the first product displayed.
-		ts.Hover_Over_Product();
+		ts.HoverOverProduct();
 		// 6. 'More' button will be displayed, click on 'More' button.
-		ts.Click_More_Button_Product_One();
+		ts.ClickMoreButtonProductOne();
 
 		ProductPage ProdP = PageFactory.initElements(driver, ProductPage.class);
 		// 7. Make sure quantity is set to 1.
-		ProdP.Enter_Quantity("1");
+		ProdP.EnterQuantity("1");
 		// 8. Select size 'L'
-		ProdP.Select_Size("L");
+		ProdP.SelectSize("L");
 		// 9. Select color.
-		ProdP.Select_Color();
+		ProdP.SelectColor();
 		// 10. Click 'Add to Cart' button.
-		ProdP.Click_AddToCart_Button();
+		ProdP.ClickAddToCartButton();
 		// 11. Click 'Proceed to checkout' button.
-		ProdP.Click_ProceedToCheckout_Button();
+		ProdP.ClickProceedToCheckoutButton();
 		// 12. Change the quantity to 2.
 		// 13. Verify that Total price is changing and reflecting correct price.
 		ProdP.TestTotalCalculation();

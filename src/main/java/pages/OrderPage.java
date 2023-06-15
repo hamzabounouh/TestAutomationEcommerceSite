@@ -29,31 +29,31 @@ public class OrderPage {
 		ProceedToCheckout_Button.click();
 	}
 
-	public void Click_ProceedToCheckout_Address_Page() {
+	public void ClickProceedToCheckout_AddressPage() {
 		ProceedToCheckout_Button_Address_Page.click();
 	}
 
-	public void Click_ProceedToCheckout_Shipping_Page() {
+	public void ClickProceedToCheckoutShippingPage() {
 		ProceedToCheckout_Button_Shipping_Page.click();
 	}
 
-	public void Click_CheckBox_AgreeToTerms_Shipping_Page() {
+	public void ClickCheckBoxAgreeToTermsShippingPage() {
 		CheckBox_AgreeToTerms_Shipping_Page.click();
 	}
 
-	public void Click_PayByBankWire_Payment_Page() {
+	public void ClickPayByBankWirePaymentPage() {
 		PayByBankWire_Payment_Page.click();
 	}
 
-	public void Click_IConfirmMyOrder_Page() {
+	public void ClickIConfirmMyOrderPage() {
 		IConfirmMyOrder_Payment_Page.click();
 	}
 	
-	public void Click_MyAccount_Button() {
+	public void ClickMyAccountButton() {
 		MyAccount_Button.click();
 	}
 	
-	public void Assert_Order_Confirmation() {
+	public void AssertOrderConfirmation() {
 		
 		if(Order_Confirmation.getText().contains("complete")) {
 			System.out.println("Order Verified");
