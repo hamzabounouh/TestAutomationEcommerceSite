@@ -49,7 +49,7 @@ public class ClickFirstMenuLinkAndPrintPageTitle {
 
 		// 6. Get the page title and print it.
 		ContactUsPage contactus = PageFactory.initElements(driver, ContactUsPage.class);
-		String ContactUsPageTitle = contactus.GetPageTitle();
+		String ContactUsPageTitle = contactus.getPageTitle();
 		System.out.println(ContactUsPageTitle);
 		// 7. Navigate back to Home Page.
 		driver.navigate().back();

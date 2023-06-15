@@ -37,8 +37,8 @@ public class VerifyInvalidEmailAddressError {
 
 		LoginPage loginp = PageFactory.initElements(driver, LoginPage.class);
 		// 3. Enter invalid email address in the email box and click enter.
-		loginp.FillCreatAccountWithInvalidEmailField("useremail@yxz");
-		loginp.ClickCreateAnAccountButton();
+		loginp.fillCreatAccountWithInvalidEmailField("useremail@yxz");
+		loginp.clickCreateAnAccountButton();
 		// 4. Validate that an error message is displaying saying "Invalid email
 		// address".
 		loginp.VerifyCreatAccountWithInvalidEmailField();
