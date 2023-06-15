@@ -52,9 +52,9 @@ public class CorrectTotalPrice {
 
 		// 2. Login to the website.
 		LoginPage LoginP = PageFactory.initElements(driver, LoginPage.class);
-		LoginP.Enter_EMail_Address(username);
-		LoginP.Enter_Password(password);
-		LoginP.Click_Signin_Button();
+		LoginP.EnterEMailAddress(username);
+		LoginP.EnterPassword(password);
+		LoginP.ClickSigninButton();
 
 		MyAccountPage MyAcc = PageFactory.initElements(driver, MyAccountPage.class);
 		// 3. Move your cursor over Women's link.
