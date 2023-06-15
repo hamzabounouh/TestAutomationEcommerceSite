@@ -30,14 +30,14 @@ public class CreateAnAccountPage extends BasePage {
 	@FindBy(how = How.XPATH, using = "//input[@id='city']") WebElement cityField;
 	@FindBy(how = How.XPATH, using = "//select[@id='id_state']") WebElement State_Field;
 	@FindBy(how = How.XPATH, using = "//input[@id='postcode']") WebElement zipCodeField;
-	@FindBy(how = How.XPATH, using = "//select[@id='id_country']") WebElement Country_Field;
-	@FindBy(how = How.XPATH, using = "//input[@id='phone_mobile']") WebElement CellPhoneField;
-	@FindBy(how = How.XPATH, using = "//input[@id='alias']") WebElement AliasAddress_Field;
-	@FindBy(how = How.XPATH, using = "//button[@id='submitAccount']") WebElement Register_Button;
-	@FindBy(how = How.XPATH, using = "//div[@id=\"center_column\"]/div/p") WebElement ErrorAlertForMandatoryFields;
+	@FindBy(how = How.XPATH, using = "//select[@id='id_country']") WebElement countryField;
+	@FindBy(how = How.XPATH, using = "//input[@id='phone_mobile']") WebElement cellPhoneField;
+	@FindBy(how = How.XPATH, using = "//input[@id='alias']") WebElement aliasAddressField;
+	@FindBy(how = How.XPATH, using = "//button[@id='submitAccount']") WebElement registerButton;
+	@FindBy(how = How.XPATH, using = "//div[@id=\"center_column\"]/div/p") WebElement errorAlertForMandatoryFields;
 
 	
-	public void click_Mr_Radio_Button() {
+	public void clickMrRadioButton() {
 		Mr_RadioButton.click();
 	}
 	
@@ -45,28 +45,28 @@ public class CreateAnAccountPage extends BasePage {
 		FirstName_Field.sendKeys(FirstName);
 	}
 	
-	public void fill_Last_Name_Field(String LastName) {
+	public void fillLastNameField(String LastName) {
 		lastNameField.sendKeys(LastName);
 	}
 	
-	public void fill_Password_Field(String Password) {
+	public void fillPasswordField(String Password) {
 		passwordField.sendKeys(Password);
 	}
 	
-	public void select_Day_Selection(String day) {
+	public void selectDaySelection(String day) {
 		
 		selectFromDropdownByValue(daySelection, removeDecimalPoint(day));
 	}
 	
 	public void SelectMonthSelection(String month) {
-		select_From_Dropdown_By_Value(monthSelection, month);
+		selectFromDropdownByValue(monthSelection, month);
 	}
 	
-	public void select_Year_Selection(String year) {
-		select_From_Dropdown_By_Value(yearSelection, RemoveDecimalPoint(year));
+	public void selectYearSelection(String year) {
+		selectFromDropdownByValue(yearSelection, RemoveDecimalPoint(year));
 	}
 	
-	private void select_From_Dropdown_By_Value(WebElement year_Selection2, Object removeDecimalPoint) {
+	private void selectFromDropdownByValue(WebElement year_Selection2, Object removeDecimalPoint) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -113,25 +113,25 @@ public class CreateAnAccountPage extends BasePage {
 	}
 
 	public void SelectCountryField(String Country) {
-		selectFromDropdownByVisibleText(Country_Field, Country);
+		selectFromDropdownByVisibleText(countryField, Country);
 	}
 
 	public void FillCellPhoneField() {
-		CellPhoneField.sendKeys(phoneNumberGenerator());
+		cellPhoneField.sendKeys(phoneNumberGenerator());
 	}
 	
 	public void FillAliasAddressField(String alias) {
-		AliasAddress_Field.clear();
-		AliasAddress_Field.sendKeys(alias);
+		aliasAddressField.clear();
+		aliasAddressField.sendKeys(alias);
 	}
 
 	public void ClickRegisterButton() {
-		Register_Button.click();
+		registerButton.click();
 	}
 
 	public void VerifyErrorAlertForMandatoryFields() {
 		
-		if(ErrorAlertForMandatoryFields.isDisplayed() == true) {
+		if(errorAlertForMandatoryFields.isDisplayed() == true) {
 			System.out.println("Success! Error Alert For Mandatory Fields is displayed");
 		}else {
 			System.out.println("Failure, Error Alert For Mandatory Fields is not displayed");
