@@ -39,8 +39,8 @@ public class VerifyErrorMessagesForMandatoryFields {
 		loginp.clickCreateAnAccountButton();
 
 		CreateAnAccountPage createaccp = PageFactory.initElements(driver, CreateAnAccountPage.class);
-		createaccp.ClickRegisterButton();
-		createaccp.VerifyErrorAlertForMandatoryFields();
+		createaccp.clickRegisterButton();
+		createaccp.verifyErrorAlertForMandatoryFields();
 
 	}
 

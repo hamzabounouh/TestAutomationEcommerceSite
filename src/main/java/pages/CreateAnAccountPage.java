@@ -59,14 +59,14 @@ public class CreateAnAccountPage extends BasePage {
 	}
 	
 	public void SelectMonthSelection(String month) {
-		selectFromDropdownByValue(monthSelection, month);
+		select_From_Dropdown_By_Value(monthSelection, month);
 	}
 	
 	public void selectYearSelection(String year) {
-		selectFromDropdownByValue(yearSelection, RemoveDecimalPoint(year));
+		select_From_Dropdown_By_Value(yearSelection, RemoveDecimalPoint(year));
 	}
 	
-	private void selectFromDropdownByValue(WebElement year_Selection2, Object removeDecimalPoint) {
+	private void select_From_Dropdown_By_Value(WebElement year_Selection2, Object removeDecimalPoint) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -100,36 +100,36 @@ public class CreateAnAccountPage extends BasePage {
 		address1Field.sendKeys(Address);
 	}
 
-	public void FillCityField(String City) {
+	public void fillCityField(String City) {
 		cityField.sendKeys(City);
 	}
 
-	public void SelectStateField(String State) {
+	public void selectStateField(String State) {
 		selectFromDropdownByVisibleText(State_Field, State);
 	}
 
-	public void FillZipCodeField(String ZipCode) {
+	public void fillZipCodeField(String ZipCode) {
 		zipCodeField.sendKeys(ZipCode);
 	}
 
-	public void SelectCountryField(String Country) {
+	public void selectCountryField(String Country) {
 		selectFromDropdownByVisibleText(countryField, Country);
 	}
 
-	public void FillCellPhoneField() {
+	public void fillCellPhoneField() {
 		cellPhoneField.sendKeys(phoneNumberGenerator());
 	}
 	
-	public void FillAliasAddressField(String alias) {
+	public void fillAliasAddressField(String alias) {
 		aliasAddressField.clear();
 		aliasAddressField.sendKeys(alias);
 	}
 
-	public void ClickRegisterButton() {
+	public void clickRegisterButton() {
 		registerButton.click();
 	}
 
-	public void VerifyErrorAlertForMandatoryFields() {
+	public void verifyErrorAlertForMandatoryFields() {
 		
 		if(errorAlertForMandatoryFields.isDisplayed() == true) {
 			System.out.println("Success! Error Alert For Mandatory Fields is displayed");

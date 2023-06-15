@@ -16,7 +16,7 @@ public class LoginPage extends BasePage{
 	//Element Library
 	@FindBy(how = How.XPATH, using = "//input[@id='email']") WebElement emailAddressField;
 	@FindBy(how = How.XPATH, using = "//input[@id='passwd']") WebElement passwordField;
-	@FindBy(how = How.XPATH, using = "//button[@id='SubmitLogin']") WebElement SignIn_Button;
+	@FindBy(how = How.XPATH, using = "//button[@id='SubmitLogin']") WebElement signInButton;
 	@FindBy(how = How.XPATH, using = "//button[@name='SubmitCreate']") WebElement createAnAccountButton;
 	@FindBy(how = How.XPATH, using = "//input[@id='email_create']") WebElement creatAccountEmailField;
 	@FindBy(how = How.XPATH, using = "//*[@id='create_account_error']") WebElement invalidEmailAlert;
@@ -32,7 +32,7 @@ public class LoginPage extends BasePage{
 	}
 	
 	public void clickSigninButton() {
-		SignIn_Button.click();
+		signInButton.click();
 	}
 	
 	public void clickCreateAnAccountButton() {

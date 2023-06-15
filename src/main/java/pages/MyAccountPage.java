@@ -19,7 +19,7 @@ public class MyAccountPage {
 	@FindBy(how = How.XPATH, using = "//a[@title='Women']")
 	WebElement Women_Button;
 	@FindBy(how = How.XPATH, using = "//*[@id='block_top_menu']/ul/li[1]/ul/li[1]/ul/li[1]/a")
-	WebElement Tshirts_Button;
+	WebElement tshirtsButton;
 	@FindBy(how = How.XPATH, using = "//*[@id='center_column']/div/div[1]/ul/li[1]/a")
 	WebElement OrderHistoryAndDetails_Button;
 	@FindBy(how = How.XPATH, using = "//a[@class='account']/span")
@@ -32,12 +32,14 @@ public class MyAccountPage {
 	}
 
 	public void ClickTshirtsButton() {
-		Tshirts_Button.click();
+		tshirtsButton.click();
 	}
 
 	public void ClickOrderHistoryAndDetailsButton() {
 		OrderHistoryAndDetails_Button.click();
 	}
+
+
 	
 
 	
